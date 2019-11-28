@@ -1,10 +1,10 @@
 version: "3.0"
 services:
-  fashion:
+  mano:
     build:
       context: .
-    container_name: fashion
-    image: fashion
+    container_name: mano
+    image: jupyter-image-custom
     restart: unless-stopped
     logging:
       driver: json-file
@@ -14,6 +14,6 @@ services:
       - 8888:8888
       - 6006:6006
     volumes:
-      - ../../:/usr/src/fashion
-    command: /opt/conda/bin/jupyter notebook --notebook-dir=/usr/src/fashion --ip='0.0.0.0' --port=8888 --no-browser --allow-root --NotebookApp.token='' --NotebookApp.password=''
+      - ../../:/usr/src/mano
+    command: /opt/conda/bin/jupyter notebook --notebook-dir=/usr/src/mano --ip='0.0.0.0' --port=8888 --no-browser --allow-root --NotebookApp.token='' --NotebookApp.password=''
     

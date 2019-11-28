@@ -10,3 +10,8 @@ ipywidgets
 ipynb
 umap-learn
 sklearn
+xgboost
+seaborn
+tensorflow
+keras
+opencv-contrib-python
